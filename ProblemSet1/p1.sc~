@@ -1,0 +1,21 @@
+(define (set-union A B)
+ (if (null? A)
+     (dup B)
+     ))
+
+(define (dup A)
+ (if(null? A)
+    A
+    (if (chk (rest A) (first A))
+       (dup (rest A))
+       (cons (first A) (dup (rest A))))))
+
+(define (chk A x)
+ (if(null? A)
+    0
+    (if (= (first A) x)
+       1
+       (chk (rest A) x))))
+
+(define (rem A x)
+ (
